@@ -72,6 +72,7 @@ gem "jekyll", "~> 4.3"
 gem "jekyll-theme-chirpy", "~> 7.0"
 In _config.yml:
 theme: jekyll-theme-chirpy
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -94,12 +95,15 @@ tagline: "Optional tagline"
 description: "A brief description"
 url: "https://USERNAME.github.io" # for user site
 baseurl: "" # for user site, "/REPO" for project site
+
 author:
   name: greedy
   links:
     - https://github.com/username
     - https://twitter.com/username
+
 timezone: Australia/Adelaide
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
