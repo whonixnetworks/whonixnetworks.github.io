@@ -6,7 +6,7 @@ author: greedy
 date: 2025-10-03 12:00:00 +1030
 categories: [Blogging, Jekyll]
 tags: [homelab, jekyll, chirpy]
-pin: false
+pin: true
 ---
 
 Want to copy my blog website? Follow this guide!
