@@ -54,65 +54,120 @@ Use system packages or a version manager. For Ubuntu 22.04+:
 ```bash
 sudo apt update
 sudo apt install -y ruby-full build-essential zlib1g-dev
+```
+
 Add gem bin path to shell:
+
+```bash
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+```
+
 Install Jekyll and Bundler:
+
+```bash
 gem install jekyll bundler
-This isolates gems to the home directory to avoid sudo usage and permission issues common for beginners on Linux. {: .prompt-tip }
+```
+
+This isolates gems to the home directory to avoid sudo usage and permission issues common for beginners on Linux.
+{:.prompt-tip }
+
 Create a New Jekyll Site
+
+```bash
 jekyll new my-blog --skip-bundle
 cd my-blog
-Skipping the initial bundle lets Chirpy be added cleanly next. {: .prompt-tip }
+```
+
+Skipping the initial bundle lets Chirpy be added cleanly next.
+{:.prompt-tip }
+
 Add the Chirpy Theme
+
 Theme Gem Approach (Recommended)
+
 Edit your Gemfile:
+
+```ruby
 gem "jekyll", "~> 4.3"
 gem "jekyll-theme-chirpy", "~> 7.0"
-In _config.yml:
-theme: jekyll-theme-chirpy
+```
 
+In _config.yml:
+
+```yaml
+theme: jekyll-theme-chirpy
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+```
+
 Remove minima references if present. This keeps the theme as a dependency with minimal repo clutter.
+
 Starter Repo Approach
+
 Fork or use a Chirpy starter template and clone it locally. Keep Gemfile and _config.yml as provided; customize content only.
-Tip: Beginners should prefer the theme gem approach. {: .prompt-tip }
+
+Beginners should prefer the theme gem approach.
+{:.prompt-tip }
+
 Install Dependencies and Run Locally
+
+```bash
 bundle install
 bundle exec jekyll serve
+```
+
 Open http://127.0.0.1:4000 to preview the site.
+
 If port 4000 is in use, specify a different port:
+
+```bash
 bundle exec jekyll serve --livereload --port 4001
-Live reload automatically refreshes the browser on file changes, great when drafting posts in VS Code. {: .prompt-tip }
+```
+
+Live reload automatically refreshes the browser on file changes, great when drafting posts in VS Code.
+{:.prompt-tip }
+
 Configure Site Metadata
+
 Edit _config.yml:
+
+```yaml
 title: "Your Blog Title"
 tagline: "Optional tagline"
 description: "A brief description"
 url: "https://USERNAME.github.io" # for user site
 baseurl: "" # for user site, "/REPO" for project site
-
 author:
   name: greedy
   links:
     - https://github.com/username
     - https://twitter.com/username
-
 timezone: Australia/Adelaide
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+```
+
 If using a custom domain:
+
+```bash
 echo "blog.example.com" > CNAME
+```
+
 Create Your First Post
+
+```bash
 mkdir -p _posts
+```
+
 Create _posts/2025-10-03-jekyll-chirpy-setup.md with front matter:
+
+```yaml
 ---
 layout: post
 title: "Jekyll & Chirpy Setup"
@@ -122,26 +177,44 @@ tags: [homelab, jekyll, chirpy]
 author: greedy
 date: 2025-10-03 12:00:00 +1030
 ---
+```
+
 Then paste your content below the front matter block.
+
 Add Pages and Navigation
-About: create about.md with layout: page and add to nav in _config.yml
-Links/Projects: similar page with a simple Markdown list
+
+· About: create about.md with layout: page and add to nav in _config.yml
+· Links/Projects: similar page with a simple Markdown list
+
 Chirpy exposes nav/sidebar via _config.yml.
+
 Customize Chirpy
-Colors/light/dark: override minimal CSS in assets if desired
-Home index: adjust index.md or theme settings
-Social cards/SEO: ensure jekyll-seo-tag metadata is set
+
+· Colors/light/dark: override minimal CSS in assets if desired
+· Home index: adjust index.md or theme settings
+· Social cards/SEO: ensure jekyll-seo-tag metadata is set
+
 Advanced: create _data/navigation.yml or _data/social.yml to centralize links; add analytics in _includes/head.
+
 Initialize Git and Push
+
+```bash
 git init
 git add .
 git commit -m "chore: initial Jekyll + Chirpy"
 git remote add origin git@github.com:USERNAME/REPO.git
 git branch -M main
 git push -u origin main
-Use SSH keys for smoother pushes. {: .prompt-tip }
+```
+
+Use SSH keys for smoother pushes.
+{:.prompt-tip }
+
 Deploy to GitHub Pages (Workflow Method)
+
 Create .github/workflows/pages.yml:
+
+```yaml
 name: Deploy Jekyll with Chirpy
 
 on:
@@ -188,29 +261,58 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+```
+
 Commit and push:
+
+```bash
 git add .github/workflows/pages.yml
 git commit -m "ci: GitHub Pages workflow"
 git push
+```
+
 Domain and HTTPS
-For username.github.io, DNS is automatic
-Custom domains: point A/AAAA or CNAME to GitHub Pages; include CNAME file
-Enable "Enforce HTTPS" in Pages settings
+
+· For username.github.io, DNS is automatic
+· Custom domains: point A/AAAA or CNAME to GitHub Pages; include CNAME file
+· Enable "Enforce HTTPS" in Pages settings
+
 Writing Workflow
+
 Draft locally:
+
+```bash
 bundle exec jekyll serve --livereload
+```
+
 Helper script to create new posts:
+
+```bash
 DATE=$(date +%F)
 FILE="_posts/${DATE}-new-post.md"
 printf -- "---\nlayout: post\ntitle: \"New Post\"\ndate: $(date +"%Y-%m-%d %H:%M:%S %z")\ncategories: [Blogging]\ntags: [note]\n---\n\n" > "$FILE"
 echo "Created $FILE"
+```
+
 Common Pitfalls and Fixes
-Ruby mismatch: Set ruby-version: '3.2' in workflow; commit Gemfile.lock. {: .prompt-warning }
-baseurl mistakes: Use {{ site.baseurl }} for project sites. {: .prompt-warning }
-Missing plugins: Workflow method ensures SEO/sitemap feed build. {: .prompt-warning }
-Permission errors: Use GEM_HOME to avoid sudo issues. {: .prompt-warning }
+
+Ruby mismatch: Set ruby-version: '3.2' in workflow; commit Gemfile.lock.
+{:.prompt-warning }
+
+baseurl mistakes: Use {{ site.baseurl }} for project sites.
+{:.prompt-warning }
+
+Missing plugins: Workflow method ensures SEO/sitemap feed build.
+{:.prompt-warning }
+
+Permission errors: Use GEM_HOME to avoid sudo issues.
+{:.prompt-warning }
+
 Optional: Containerized Local Dev
+
 Create Dockerfile:
+
+```dockerfile
 FROM ruby:3.2-bookworm
 RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
 WORKDIR /srv/jekyll
@@ -219,11 +321,18 @@ RUN gem install bundler && bundle install || true
 COPY . .
 EXPOSE 4000
 CMD ["bash","-lc","bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload"]
+```
+
 Build and run:
+
+```bash
 docker build -t jekyll-chirpy .
 docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll-chirpy
+```
+
 Next Steps
-Add analytics, comments (Giscus), and sitemap
-Set up backup workflow for _site and repo
-Ensure local preview, _config.yml, Actions workflow, HTTPS, and first post render correctly
-Explore Chirpy's built-in features like post pinning, table of contents, and syntax highlighting
+
+· Add analytics, comments (Giscus), and sitemap
+· Set up backup workflow for _site and repo
+· Ensure local preview, _config.yml, Actions workflow, HTTPS, and first post render correctly
+· Explore Chirpy's built-in features like post pinning, table of contents, and syntax highlighting
