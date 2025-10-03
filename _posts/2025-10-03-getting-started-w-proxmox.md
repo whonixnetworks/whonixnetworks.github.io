@@ -3,7 +3,7 @@ title: Getting Started with Proxmox
 description: >
   Learn why Proxmox is a powerful open-source hypervisor for homelabs, its container and VM management, and best practices for deployment.
 author: greedy
-date: 2025-10-03
+date: 2025-10-04 10:00:00 +1030
 categories: [Hypervisors, Proxmox]
 tags: [homelab, beginner, proxmox, virtualization, lxc]
 pin: false
@@ -67,7 +67,7 @@ Proxmox Virtual Environment (Proxmox VE) is a complete, open-source server virtu
 # All running on the same hardware
 ```
 
-Benefits for Homelabs
+<u>Benefits for Homelabs</u>
 
 For Learning Enterprise Tech:
 
