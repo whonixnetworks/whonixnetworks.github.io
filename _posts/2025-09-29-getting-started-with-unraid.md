@@ -3,7 +3,7 @@ title: Getting Started with UNRAID
 description: >
   Learn why UNRAID is a unique hypervisor choice for homelabs, its drive flexibility, Docker integration, and best practices for setup.
 author: greedy
-date: 2025-10-04 10:00:00 +1030
+date: 2025-10-04 10:30:00 +1030
 categories: [Hypervisors, Unraid]
 tags: [homelab, beginner, unraid, storage, docker]
 pin: false
