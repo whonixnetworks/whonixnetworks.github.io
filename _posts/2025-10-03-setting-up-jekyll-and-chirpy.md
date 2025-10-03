@@ -15,20 +15,20 @@ Want to copy my blog website? Follow this guide!
 My blog and this entire setup guide is based off Techno Tim's older video, but this post updates everything for current Jekyll, Ruby, Bundler, and Chirpy. This guide favors reproducible commands, minimal gotchas, and GitHub Pages deployment that actually works today.  
 Check out [TechnoTims Video](https://youtu.be/F8iOU1ci19Q?si=DpKqJfrFDqBM9uvx)
 
-## What you'll build
+# What you'll build
 
 - A local Jekyll workspace with the Chirpy theme running at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 - A GitHub repository configured for Pages with workflow-based builds (no local build artifacts committed)
 - A clean content workflow: write posts in Markdown, preview locally, push to publish
 
-## Prerequisites
+# Prerequisites
 
 - Linux workstation or WSL with Git, Ruby, and Bundler; VS Code is optional but recommended
 - A GitHub account and a repository (repo name can be anything; for user sites, use `username.github.io`)
 
 ---
 
-## 1) Install Ruby and Bundler
+# 1) Install Ruby and Bundler
 
 Use system packages or a version manager. For Ubuntu 22.04+:
 
@@ -55,7 +55,7 @@ gem install jekyll bundler
 
 ---
 
-## 2) Create a new Jekyll site
+# 2) Create a new Jekyll site
 
 ```bash
 jekyll new my-blog --skip-bundle
@@ -66,9 +66,9 @@ cd my-blog
 
 ---
 
-## 3) Add the Chirpy theme
+# 3) Add the Chirpy theme
 
-### Theme gem approach (recommended)
+Theme gem approach (recommended)
 
 Edit your Gemfile:
 
@@ -89,7 +89,7 @@ plugins:
 
 Remove minima references if present. This keeps the theme as a dependency with minimal repo clutter.
 
-### Starter repo approach
+Starter repo approach
 
 Fork or use a Chirpy starter template and clone it locally.
 
@@ -99,7 +99,7 @@ Keep Gemfile and `_config.yml` as provided; customize content only.
 
 ---
 
-## 4) Install dependencies and run locally
+# 4) Install dependencies and run locally
 
 ```bash
 bundle install
@@ -118,7 +118,7 @@ Live reload automatically refreshes the browser on file changes, great when draf
 
 ---
 
-## 5) Configure site metadata
+# 5) Configure site metadata
 
 Edit `_config.yml`:
 
@@ -148,7 +148,7 @@ echo "blog.example.com" > CNAME
 
 ---
 
-## 6) Create the first post
+# 6) Create the first post
 
 ```bash
 mkdir -p _posts
@@ -172,7 +172,7 @@ Then paste the content (this article) below that block.
 
 ---
 
-## 7) Add pages and navigation
+# 7) Add pages and navigation
 
 - **About:** create `about.md` with `layout: page` and add to nav in `_config.yml`.
 - **Links/Projects:** similar page with a simple Markdown list.
@@ -181,7 +181,7 @@ Chirpy exposes nav/sidebar via `_config.yml`.
 
 ---
 
-## 8) Customize Chirpy
+# 8) Customize Chirpy
 
 - **Colors/light/dark:** override minimal CSS in assets if desired.
 - **Home index:** adjust `index.md` or theme settings.
@@ -191,7 +191,7 @@ Chirpy exposes nav/sidebar via `_config.yml`.
 
 ---
 
-## 9) Initialize Git and push
+# 9) Initialize Git and push
 
 ```bash
 git init
@@ -206,7 +206,7 @@ Use SSH keys for smoother pushes.
 
 ---
 
-## 10) Deploy to GitHub Pages (workflow method)
+# 10) Deploy to GitHub Pages (workflow method)
 
 Create `.github/workflows/pages.yml`:
 
@@ -269,7 +269,7 @@ git push
 
 ---
 
-## 11) Domain and HTTPS
+# 11) Domain and HTTPS
 
 - For `username.github.io`, DNS is automatic.
 - **Custom domains:** point A/AAAA or CNAME to GitHub Pages; include CNAME file.
@@ -277,7 +277,7 @@ git push
 
 ---
 
-## 12) Writing workflow
+# 12) Writing workflow
 
 Draft locally:
 
@@ -296,7 +296,7 @@ echo "Created $FILE"
 
 ---
 
-## 13) Common pitfalls and fixes
+# 13) Common pitfalls and fixes
 
 - **Ruby mismatch:** set `ruby-version: '3.2'` in workflow; commit `Gemfile.lock`.
 - **baseurl mistakes:** use `{{ site.baseurl }}` for project sites.
@@ -305,7 +305,7 @@ echo "Created $FILE"
 
 ---
 
-## 14) Optional: containerized local dev
+# 14) Optional: containerized local dev
 
 Create `Dockerfile`:
 
@@ -329,10 +329,8 @@ docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll-chirpy
 
 ---
 
-## 15) Next steps
+# 15) Next steps
 
 - Add analytics, comments (Giscus), sitemap.
 - Set up backup workflow for `_site` and repo.
 - Ensure local preview, `_config.yml`, Actions workflow, HTTPS, and first post render correctly.
-
-This guide uses a modern toolchain with GitHub Actions, giving beginners and power users a predictable and clean blogging workflow.
