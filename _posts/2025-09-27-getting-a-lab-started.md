@@ -35,7 +35,7 @@ Let me help clear up the confusion and get you started on the right foot.
 Reality Check: Plenty of homelabbers run production-like environments on consumer hardware. The skills you learn transfer regardless of what hardware you're using.
 {:.prompt-info }
 
-Myth 2: "You Must Have a Full 42U Rack"
+### Myth 2: "You Must Have a Full 42U Rack"
 
 The Truth: Most homelabs don't need a rack at all.
 
@@ -49,7 +49,7 @@ Practical Alternatives:
 Start with what actually fits your space. A quiet, cool, and organized corner is much better than a loud, hot rack in your living space.
 {:.prompt-tip }
 
-Myth 3: "More Cores and RAM = Better Homelab"
+### Myth 3: "More Cores and RAM = Better Homelab"
 
 The Truth: Efficient resource usage matters way more than raw power.
 
@@ -65,7 +65,7 @@ Total for Basic Homelab 4-8 cores 16GB Varies
 A modern low-power CPU with 16GB RAM can comfortably run 10+ services. Plan for your actual workload, not theoretical maximums.
 {:.prompt-warning }
 
-Myth 4: "You Need 10Gb Networking Everything"
+### Myth 4: "You Need 10Gb Networking Everything"
 
 The Truth: 1Gb Ethernet is perfectly fine for about 90% of homelab use cases.
 
@@ -81,7 +81,7 @@ iftop -i eth0
 nethogs
 ```
 
-Myth 5: "Homelabs Are Expensive to Run"
+### Myth 5: "Homelabs Are Expensive to Run"
 
 The Truth: With modern hardware and smart planning, you can keep costs pretty reasonable.
 
@@ -96,9 +96,9 @@ Raspberry Pi Cluster (4 nodes) 15W $1.50
 
 ---
 
-Common First-Time Mistakes
+## Common First-Time Mistakes
 
-Mistake 1: Buying the Cheapest Hardware Without Research
+### Mistake 1: Buying the Cheapest Hardware Without Research
 
 The Problem: That "budget" gear can end up costing you more in power bills and frustration.
 
@@ -110,7 +110,7 @@ What to Research Before Buying:
 · Room for future expansion
 · Remote management capabilities
 
-Mistake 2: No Backup Strategy
+### Mistake 2: No Backup Strategy
 
 The Problem: We've all thought "it's just a homelab" until we lose months of configuration work.
 
@@ -131,25 +131,25 @@ echo "Backup completed: $BACKUP_DIR"
 Follow the 3-2-1 backup rule: 3 copies, 2 different media types, 1 offsite. This matters even for homelabs.
 {:.prompt-danger }
 
-Mistake 3: Overcomplicating the Network
+### Mistake 3: Overcomplicating the Network
 
 The Problem: Creating complex VLANs and firewall rules before understanding the basics.
 
 A More Sensible Approach:
 
-Stage 1: Keep It Simple
+#### Stage 1: Keep It Simple
 
 · Single subnet (like 192.168.1.0/24)
 · Basic firewall rules (block incoming, allow outgoing)
 · Only forward ports for essential services
 
-Stage 2: Add Complexity Gradually
+#### Stage 2: Add Complexity Gradually
 
 · VLANs to separate IoT, trusted, and guest networks
 · Inter-VLAN routing restrictions
 · VPN for secure remote access
 
-Stage 3: Advanced Networking
+#### Stage 3: Advanced Networking
 
 · Complex traffic shaping
 · Intrusion detection and prevention
@@ -158,7 +158,7 @@ Stage 3: Advanced Networking
 Start with a single subnet. Only add complexity when you have a specific need for it.
 {:.prompt-tip }
 
-Mistake 4: Skipping Documentation
+### Mistake 4: Skipping Documentation
 
 The Problem: We've all said "I'll remember how I set this up" - usually right before we forget.
 
@@ -182,7 +182,7 @@ A Simple Documentation Template:
 [How to backup and restore]
 ```
 
-Mistake 5: Trying to Learn Everything at Once
+### Mistake 5: Trying to Learn Everything at Once
 
 The Problem: Getting overwhelmed by too many technologies at once.
 
@@ -195,21 +195,21 @@ Advanced Topics 3-6 months Kubernetes, Infrastructure as Code, CI/CD
 
 ---
 
-Realistic Homelab Starter Scenarios
+## Realistic Homelab Starter Scenarios
 
-Scenario 1: The Budget Beginner ($100-300)
+### Scenario 1: The Budget Beginner ($100-300)
 
 · Hardware: Used Dell Optiplex 7050 (i5-6500T, 16GB RAM, 256GB SSD + 2TB HDD)
 · Power Draw: 15-25W (about $3-5 monthly)
 · Services: Docker, Portainer, Jellyfin, Pi-hole, basic file sharing
 
-Scenario 2: The Balanced Homelab ($500-800)
+### Scenario 2: The Balanced Homelab ($500-800)
 
 · Hardware: HP ProDesk G4 (i5-8500T, 32GB RAM) plus basic NAS and managed switch
 · Power Draw: 30-50W (around $6-10 monthly)
 · Services: All beginner services plus Nextcloud, Home Assistant, monitoring, VPN
 
-Scenario 3: The Enthusiast ($1000+)
+### Scenario 3: The Enthusiast ($1000+)
 
 · Hardware: Dell R730 or custom build with 10Gb networking and UPS
 · Power Draw: 100-200W (about $20-40 monthly)
@@ -217,9 +217,9 @@ Scenario 3: The Enthusiast ($1000+)
 
 ---
 
-Essential Services to Start With
+## Essential Services to Start With
 
-Phase 1: Foundation Services
+### Phase 1: Foundation Services
 
 ```bash
 # Start with these basics:
@@ -230,7 +230,7 @@ docker run -d --name jellyfin -p 8096:8096 jellyfin/jellyfin
 docker run -d --name portainer -p 9000:9000 portainer/portainer
 ```
 
-Phase 2: Quality of Life Services
+### Phase 2: Quality of Life Services
 
 Once you're comfortable, add:
 
@@ -240,9 +240,9 @@ Once you're comfortable, add:
 
 ---
 
-Budget Management Tips
+## Budget Management Tips
 
-Calculate Your True Costs:
+### Calculate Your True Costs:
 
 ```bash
 #!/bin/bash
@@ -258,7 +258,7 @@ echo "Annual power cost: $POWER_COST"
 echo "First year total: $TOTAL_COST"
 ```
 
-Smart Purchasing Strategy:
+### Smart Purchasing Strategy:
 
 · Consider used enterprise gear from reputable sellers
 · Think about power efficiency, not just raw performance
@@ -267,7 +267,7 @@ Smart Purchasing Strategy:
 
 ---
 
-Common Questions Answered
+## Common Questions Answered
 
 "Do I really need a domain and SSL certificates?"
 
@@ -287,23 +287,23 @@ Be careful with: Direct port forwarding without understanding the risks
 
 ---
 
-Tracking Your Progress
+## Tracking Your Progress
 
-First Couple Months: Foundation
+### First Couple Months: Foundation
 
 · Basic Linux server setup
 · Docker installed and working
 · First service deployed (maybe Pi-hole or Jellyfin)
 · Basic backups configured
 
-Months 3-6: Expanding Your Skills
+### Months 3-6: Expanding Your Skills
 
 · Reverse proxy with SSL certificates
 · Several services running reliably
 · Basic monitoring and alerts
 · Automated updates in place
 
-First Year: Advanced Topics
+### First Year: Advanced Topics
 
 · Trying Infrastructure as Code
 · Proper network segmentation
@@ -312,16 +312,16 @@ First Year: Advanced Topics
 
 ---
 
-When to Ask for Help
+## When to Ask for Help
 
-Good signs it's time to seek help:
+### Good signs it's time to seek help:
 
 · You've been stuck on the same problem for more than 4 hours
 · You're getting inconsistent or confusing error messages
 · Hardware issues you can't diagnose
 · Security concerns you're unsure about
 
-Great places for beginners to get help:
+### Great places for beginners to get help:
 
 · The r/homelab community on Reddit
 · Various Homelab Discord servers
@@ -330,12 +330,12 @@ Great places for beginners to get help:
 
 ---
 
-Keeping It All in Perspective
+## Keeping It All in Perspective
 
 Your homelab should be for learning and enjoyment. If it's causing stress or financial strain, it's okay to scale back. The goal is education and practical experience, not perfectly replicating a corporate data center.
 {:.prompt-info }
 
-Signs you're on the right track:
+### Signs you're on the right track:
 
 · You're regularly learning new concepts
 · Your services are reliable enough for personal or family use
