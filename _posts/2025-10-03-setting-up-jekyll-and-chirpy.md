@@ -11,6 +11,20 @@ pin: false
 
 Want to copy my blog website? Follow this guide!
 
+## What is Jekyll?
+
+Jekyll is a static site generator that transforms plain text files into beautiful websites and blogs. Unlike traditional content management systems like WordPress, Jekyll doesn't use databases or server-side processing. Instead, it takes your content written in Markdown, applies it to layouts and templates, and generates a complete static website that can be hosted anywhere.
+
+This approach offers several advantages:
+
+- **Speed:** Static files load incredibly fast with no database queries or server processing
+- **Security:** No backend means no security vulnerabilities from databases or dynamic code
+- **Version control:** Your entire site lives in Git, making it easy to track changes and collaborate
+- **Free hosting:** Deploy to GitHub Pages, Netlify, or any static host at no cost
+- **Simplicity:** Write in Markdown, commit, and your site updates automatically
+
+Jekyll is particularly popular among developers and technical writers because it allows you to focus on content while maintaining full control over your site's design and functionality.
+
 > **Disclaimer:** My blog and this entire setup guide is based on Techno Tim's older video, but this post updates everything for current Jekyll, Ruby, Bundler, and Chirpy. This guide favors reproducible commands, minimal gotchas, and GitHub Pages deployment that actually works today.  
 > Check out [Techno Tim's Video](https://youtu.be/F8iOU1ci19Q?si=DpKqJfrFDqBM9uvx)
 {: .prompt-info }
