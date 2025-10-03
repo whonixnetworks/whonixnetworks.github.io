@@ -10,9 +10,12 @@ tags: [homelab, jekyll, chirpy]
 
 Want to copy my blog website? Follow this guide!
 
-## DISCLAIMER
+-----
+##### DISCLAIMER:
 
-My blog and this entire setup guide is based off Techno Tim's older video, but this post updates everything for current Jekyll, Ruby, Bundler, and Chirpy. This guide favors reproducible commands, minimal gotchas, and GitHub Pages deployment that actually works today.
+##### My blog and this entire setup guide is based off Techno Tim's older video, but this post updates everything for current Jekyll, Ruby, Bundler, and Chirpy. This guide favors reproducible commands, minimal gotchas, and GitHub Pages deployment that actually works today.  
+Check out [TechnoTims Video](https://youtu.be/F8iOU1ci19Q?si=DpKqJfrFDqBM9uvx)
+-----
 
 ## What you'll build
 
