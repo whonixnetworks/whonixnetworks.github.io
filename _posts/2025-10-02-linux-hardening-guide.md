@@ -3,7 +3,7 @@ title: Linux System Hardening Guide
 description: >
   Learn essential Linux system hardening techniques to secure your servers. This guide covers SSH security, firewall configuration, user management, and more.
 author: greedy
-date: 2025-10-03 16:00:00 +1030
+date: 2025-10-02 16:00:00 +1030
 categories: [Homelab, Linux, Security]
 tags: [linux, security, hardening, ssh, firewall]
 pin: false
