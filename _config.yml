@@ -16,7 +16,7 @@ timezone: Australia/Adelaide
 
 title: Whonix Blog # the main title
 
-tagline: By a homelab enthusiast ~ For homelab enthusiasts # it will display as the subtitle
+tagline: By a homelab enthusiast ~      For homelab enthusiasts # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
