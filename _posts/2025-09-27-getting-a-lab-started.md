@@ -4,7 +4,7 @@ description: >
   Debunking common homelab misconceptions and avoiding beginner pitfalls. Learn what really matters when starting your homelab journey.
 author: greedy
 date: 2025-09-27 18:00:00 +1030
-categories: [Getting-Started, Read Me First]
+categories: [Getting-Started]
 tags: [homelab, beginner, mistakes, hardware, planning]
 pin: true
 ---
