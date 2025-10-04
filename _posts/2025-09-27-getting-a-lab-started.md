@@ -9,7 +9,8 @@ tags: [homelab, beginner, mistakes, hardware, planning]
 pin: true
 ---
 
-![Desktop View](/assets/img/homelab.jpeg){: .shadow }
+![Desktop View](/assets/img/homelab.jpeg){: .shadow style="border-radius:16px" }
+
 
 Starting a homelab can feel pretty overwhelming with all the conflicting advice and those intimidating setups you see online. Between the rack-mounted enterprise gear, complex networking diagrams, and endless acronyms, it's easy to get stuck in analysis paralysis or make some expensive early mistakes.
 
