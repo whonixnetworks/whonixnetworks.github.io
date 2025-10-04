@@ -9,6 +9,8 @@ tags: [homelab, beginner, proxmox, virtualization, lxc]
 pin: false
 ---
 
+![Desktop View](/assets/img/proxmox.png){: .normal }
+
 If you're looking for an enterprise-grade hypervisor that won't cost you a dime, Proxmox might be exactly what you need. Unlike simpler solutions that prioritize ease of use, Proxmox delivers professional-grade virtualization features in a package that's accessible to homelab enthusiasts.
 
 Let's explore what makes Proxmox powerful and why it's become the go-to choice for serious homelabbers.
