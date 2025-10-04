@@ -3,7 +3,7 @@ title: Homelab Myths and Common First-Time Mistakes
 description: >
   Debunking common homelab misconceptions and avoiding beginner pitfalls. Learn what really matters when starting your homelab journey.
 author: greedy
-date: 2025-09-27 18:00:00 +1030
+date: 2025-08-25 18:00:00 +1030
 categories: [Getting-Started]
 tags: [homelab, beginner, mistakes, hardware, planning]
 pin: true
@@ -18,7 +18,7 @@ Let me help clear up the confusion and get you started on the right foot.
 
 ## Common Homelab Myths Debunked
 
-### Myth 1: "You Need Enterprise Gear to Get Started"
+### <u>Myth 1:</u> "<p>You Need Enterprise Gear to Get Started</p>"
 
 **The Truth:** Some of the best homelabs actually start with old desktop computers or mini PCs.
 
