@@ -18,8 +18,10 @@ title: Whonix Blog # the main title
 
 tagline: By a homelab enthusiast ~      For homelab enthusiasts # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: >-
+  A tech-focused blog exploring homelabs, self-hosting, Linux, automation, and 
+  open-source solutions. Learn practical setups, guides, and experiments from 
+  real-world projects, written with simplicity and detail in mind.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -59,7 +61,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-WK7SWZ54VY
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -75,7 +77,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
 # Prefer color scheme setting.
 #
