@@ -18,7 +18,7 @@ Let me help clear up the confusion and get you started on the right foot.
 
 ## Common Homelab Myths Debunked
 
-### <u>Myth 1:</u> "<p>You Need Enterprise Gear to Get Started</p>"
+### Myth 1: "You Need Enterprise Gear to Get Started"
 
 **The Truth:** Some of the best homelabs actually start with old desktop computers or mini PCs.
 
