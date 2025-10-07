@@ -18,8 +18,7 @@ Let me help clear up the confusion and get you started on the right foot.
 
 ## Common Homelab Myths Debunked
 
-### **Myth 1:**  
-**"You Need Enterprise Gear to Get Started"*
+### **Myth 1:** **"You Need Enterprise Gear to Get Started"*
 
 **The Truth:**  
 Some of the best homelabs actually start with old desktop computers or mini PCs.
@@ -37,11 +36,10 @@ Some of the best homelabs actually start with old desktop computers or mini PCs.
 # - Reliable power and networking
 ```
 
-Reality Check: Plenty of homelabbers run production-like environments on consumer hardware. The skills you learn transfer regardless of what hardware you're using.
+> **Reality Check:** Plenty of homelabbers run production-like environments on consumer hardware. The skills you learn transfer regardless of what hardware you're using.
 {:.prompt-info }
 
-### **Myth 2:**  
-*"You Must Have a Full 42U Rack"*
+### **Myth 2:** *"You Must Have a Full 42U Rack"*
 
 **The Truth: **  
 Most homelabs don't need a rack at all.
@@ -53,11 +51,10 @@ Most homelabs don't need a rack at all.
 · Desktop tower case with good airflow  
 · Basic network cabinet for your networking gear 
 
-Start with what actually fits your space. A quiet, cool, and organized corner is much better than a loud, hot rack in your living space.
+> **TIP:**Start with what actually fits your space. A quiet, cool, and organized corner is much better than a loud, hot rack in your living space.
 {:.prompt-tip }
 
-### **Myth 3:**  
-*"More Cores and RAM = Better Homelab"*
+### **Myth 3:** *"More Cores and RAM = Better Homelab"*
 
 **The Truth:**  
 Efficient resource usage matters way more than raw power.
@@ -71,11 +68,10 @@ WordPress Blog 1 core 2GB 10GB
 Monitoring Stack 2 cores 4GB 20GB
 Total for Basic Homelab 4-8 cores 16GB Varies
 
-A modern low-power CPU with 16GB RAM can comfortably run 10+ services. Plan for your actual workload, not theoretical maximums.
-{:.prompt-warning }
+> **TIP:** A modern low-power CPU with 16GB RAM can comfortably run 10+ services. Plan for your actual workload, not theoretical maximums.
+{:.prompt-info }
 
-### **Myth 4:**  
-*"You Need 10Gb Networking Everything"*
+### **Myth 4:** *"You Need 10Gb Networking Everything"*
 
 **The Truth:**  
 1Gb Ethernet is perfectly fine for about 90% of homelab use cases.
@@ -92,8 +88,7 @@ iftop -i eth0
 nethogs
 ```
 
-### **Myth 5:**  
-*"Homelabs Are Expensive to Run"*
+### **Myth 5:** *"Homelabs Are Expensive to Run"*
 
 **The Truth:**  
 With modern hardware and smart planning, you can keep costs pretty reasonable.
@@ -111,8 +106,7 @@ Raspberry Pi Cluster (4 nodes) 15W $1.50
 
 ## Common First-Time Mistakes
 
-### **Mistake 1:**  
-*Buying the Cheapest Hardware Without Research*
+### **Mistake 1:** *Buying the Cheapest Hardware Without Research*
 
 **The Problem:**  
 That "budget" gear can end up costing you more in power bills and frustration.
@@ -125,8 +119,7 @@ That "budget" gear can end up costing you more in power bills and frustration.
 · Room for future expansion  
 · Remote management capabilities  
 
-### **Mistake 2:**  
-*No Backup Strategy*
+### **Mistake 2:** *No Backup Strategy*
 
 **The Problem:**  
 We've all thought "it's just a homelab" until we lose months of configuration work.
@@ -145,11 +138,10 @@ docker ps -aq | xargs docker inspect > $BACKUP_DIR/docker-containers.json
 echo "Backup completed: $BACKUP_DIR"
 ```
 
-Follow the 3-2-1 backup rule: 3 copies, 2 different media types, 1 offsite. This matters even for homelabs.
+> **WARNING** Follow the 3-2-1 backup rule: 3 copies, 2 different media types, 1 offsite. This matters even for homelabs.
 {:.prompt-danger }
 
-### **Mistake 3:**  
-*Overcomplicating the Network*
+### **Mistake 3:** *Overcomplicating the Network*
 
 **The Problem:**  
 Creating complex VLANs and firewall rules before understanding the basics.
@@ -174,11 +166,10 @@ Creating complex VLANs and firewall rules before understanding the basics.
 · Intrusion detection and prevention  
 · BGP (if you're feeling particularly adventurous)  
 
-Start with a single subnet. Only add complexity when you have a specific need for it.
+> **TIP:** Start with a single subnet. Only add complexity when you have a specific need for it.
 {:.prompt-tip }
 
-### **Mistake 4:**  
-*Skipping Documentation*
+### **Mistake 4:** *Skipping Documentation*
 
 **The Problem:** 
 We've all said "I'll remember how I set this up" - usually right before we forget.
@@ -203,8 +194,7 @@ We've all said "I'll remember how I set this up" - usually right before we forge
 [How to backup and restore]
 ```
 
-### **Mistake 5:**  
-*Trying to Learn Everything at Once*
+### **Mistake 5:** *Trying to Learn Everything at Once*
 
 **The Problem:**  
 Getting overwhelmed by too many technologies at once.
@@ -292,17 +282,17 @@ echo "First year total: $TOTAL_COST"
 
 ## Common Questions Answered
 
-*"Do I really need a domain and SSL certificates?"*
+- "Do I really need a domain and SSL certificates?"
 
 **Answer:** Yes, but it's easier than you think with services like Let's Encrypt that handle automatic renewal.
 
-*"What's the best way to access my services remotely?"*
+- "What's the best way to access my services remotely?"
 
 **Good options:** Tailscale, ZeroTier, Cloudflare Tunnel, or self-hosted VPN
 
 **Be careful with:** Direct port forwarding without understanding the risks
 
-*"How do I handle power outages and uptime?"*
+"How do I handle power outages and uptime?"
 
  · **Remember that homelabs don't need 99.999% uptime**  
 · **A basic UPS for graceful shutdown costs $100-200**  
@@ -355,7 +345,7 @@ echo "First year total: $TOTAL_COST"
 
 ## **Keeping It All in Perspective**
 
-Your homelab should be for learning and enjoyment. If it's causing stress or financial strain, it's okay to scale back. The goal is education and practical experience, not perfectly replicating a corporate data center.
+> **INFO:** Your homelab should be for learning and enjoyment. If it's causing stress or financial strain, it's okay to scale back. The goal is education and practical experience, not perfectly replicating a corporate data center.
 {:.prompt-info }
 
 ### **Signs you're on the right track:**
@@ -367,5 +357,5 @@ Your homelab should be for learning and enjoyment. If it's causing stress or fin
 
 Start small, learn consistently, and remember that every expert was once a beginner who made plenty of mistakes along the way.
 
-The hardware examples and prices mentioned are just that - examples. Your hardware needs and financial situation are unique to you.
+> **DISCLAIMER** The hardware examples and prices mentioned are just that - examples. Your hardware needs and financial situation are unique to you.
 {:.prompt-info }
