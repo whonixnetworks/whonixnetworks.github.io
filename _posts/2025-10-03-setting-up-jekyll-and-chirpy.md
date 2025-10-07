@@ -9,7 +9,7 @@ tags: [homelab, jekyll, chirpy]
 pin: true
 ---
 
-Want to copy my blog website? Follow this guide!
+### **Want to copy my blog website? Follow this guide!**
 
 ## What is Jekyll?
 
@@ -47,7 +47,7 @@ Before starting, ensure you have:
 
 ---
 
-## Install Ruby and Bundler
+### Install Ruby and Bundler
 
 Use system packages or a version manager. For Ubuntu 22.04+:
 
@@ -56,7 +56,7 @@ sudo apt update
 sudo apt install -y ruby-full build-essential zlib1g-dev
 ```
 
-Add gem bin path to shell:
+### Add gem bin path to shell:
 
 ```bash
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
@@ -64,16 +64,16 @@ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Install Jekyll and Bundler:
+### Install Jekyll and Bundler:
 
 ```bash
 gem install jekyll bundler
 ```
 
-This isolates gems to the home directory to avoid sudo usage and permission issues common for beginners on Linux.
+> **INFO:**This isolates gems to the home directory to avoid sudo usage and permission issues common for beginners on Linux.
 {:.prompt-tip }
 
-Create a New Jekyll Site
+### Create a New Jekyll Site
 
 ```bash
 jekyll new my-blog --skip-bundle
@@ -332,7 +332,7 @@ docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll jekyll-chirpy
 
 Next Steps
 
-· Add analytics, comments (Giscus), and sitemap
-· Set up backup workflow for _site and repo
-· Ensure local preview, _config.yml, Actions workflow, HTTPS, and first post render correctly
-· Explore Chirpy's built-in features like post pinning, table of contents, and syntax highlighting
+· Add analytics, comments (Giscus), and sitemap  
+· Set up backup workflow for _site and repo  
+· Ensure local preview, _config.yml, Actions workflow, HTTPS, and first post render correctly  
+· Explore Chirpy's built-in features like post pinning, table of contents, and syntax highlighting  
