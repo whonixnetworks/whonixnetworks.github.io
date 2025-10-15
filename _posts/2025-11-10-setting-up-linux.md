@@ -3,7 +3,7 @@ title: Setting Up A Linux Server
 description: >
   A step-by-step guide for beginners to set up a Linux server on Debian/Ubuntu. Learn essential setup steps, security best practices, and how to avoid common pitfalls.
 author: greedy
-date: 2025-11-10
+date: 2025-10-10
 categories: [Linux-Guides, Getting-Started]
 tags: [linux, server, beginner, setup, security, ubuntu, debian]
 pin: true
